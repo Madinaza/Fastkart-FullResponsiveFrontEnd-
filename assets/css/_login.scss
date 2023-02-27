@@ -1,0 +1,216 @@
+@import './mixin';
+@import './resseting';
+@import './variables';
+@import './responsive';
+@import './layout';
+@import './shop';
+
+
+
+.log-in-section {
+    overflow-x: hidden;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+    .image-contain {
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .log-in-box {
+        background-color: #f8f8f8;
+        padding: calc(16px + (50 - 16) * ((100vw - 320px) / (1920 - 320)));
+        border-radius: calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320)));
+        margin-bottom: 50px;
+        .log-in-title {
+            margin-bottom: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
+            h3 {
+                margin-bottom: calc(1px + (6 - 1) * ((100vw - 320px) / (1920 - 320)));
+                font-size: calc(18px + (21 - 18) * ((100vw - 320px) / (1920 - 320)));
+            }
+            h4{
+                color: #4a5568;
+                margin-top: 8px;
+                @include responsive(548px){
+                    font-size: 15px !important;
+                }
+            }
+        }
+
+        .forgot-box {
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            @include responsive(548px){
+                display: block !important;
+            }
+            .remember-box {
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                .check-box {
+                    display: block;
+                    margin-top: 2px;
+                    cursor: pointer;
+                    position: relative;
+                    margin-right: 8px;
+                    height: 100%;
+                }
+               
+            }
+        }
+        .forgot-password {
+            font-size: 16px;
+            font-weight: 500;
+            display: block;
+            color: $topHeaderBackground;
+        }
+
+        .other-log-in {
+            margin-top: 15px;
+            text-align: center;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+                width: 100%;
+                height: 1px;
+                left: 0;
+                background-color: #ddd;
+                z-index: 0;
+            }
+            h6 {
+                color: #4a5568;
+                position: relative;
+                background-color: #f9f9f9;
+                padding: 0 14px;
+                display: inline-block;
+                text-transform: uppercase;
+            }
+        }
+        .log-in-button {
+            margin-top: 20px;
+            padding: 1px 0; 
+            ul {
+                display: flex;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                gap: 15px;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                li {
+                    display: block;
+                    width: 100%;
+                    font-size: 14px;
+                    a {
+                        display: flex;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                        justify-content: center;
+                        font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+                        color: #222;
+                        border-radius: 5px;
+                        padding: calc(10px + (16 - 10) * ((100vw - 320px) / (1920 - 320))) calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
+                        -ms-flex-wrap: wrap;
+                        flex-wrap: wrap;
+                        gap: calc(8px + (10 - 8) * ((100vw - 320px) / (1920 - 320)));
+                        background-color: #fff;
+                        img {
+                            width: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
+                        }
+                    }
+                }
+            }
+        }
+        .sign-up-box {
+            margin-top: 20px;
+            text-align: center;
+            h4 {
+                color: #4a5568;
+                font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+                margin-bottom: calc(0px + (3 - 0) * ((100vw - 320px) / (1920 - 320)));
+            }
+            a {
+                font-weight: 500;
+                font-size: calc(15px + (17 - 15) * ((100vw - 320px) / (1920 - 320)));
+                margin-bottom: -4px;
+                display: block;
+                color: $topHeaderBackground;
+            }
+        }
+
+       
+    }
+    .form-floating {
+        position: relative;
+        .form-control {
+            border: none;
+            height: calc(51px + (54 - 51) * ((100vw - 320px) / (1920 - 320)));
+    line-height: normal;
+        }
+        label {
+            font-size: calc(13px + (16 - 13) * ((100vw - 320px) / (1920 - 320)));
+            color: #4a5568;
+            border: none;
+        }
+    }
+
+    .btn-animation {
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        overflow: hidden;
+        color: #fff;
+        border-radius: 5px;
+        font-weight: 600;
+        background: transparent;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        position: relative;
+        background: #ff6b6b;
+        background: -webkit-gradient(linear, left top, right top, from(#ff6b6b), to(#ff4f4f));
+        background: linear-gradient(90deg, #ff6b6b 0%, #ff4f4f 100%);
+        border: none;
+        z-index: 0;
+        padding: calc(7px + (14 - 7) * ((100vw - 320px) / (1920 - 320))) calc(14px + (32 - 14) * ((100vw - 320px) / (1920 - 320)));
+        font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: url('https://themes.pixelstrap.com/fastkart/assets/images/inner-page/log-in-bg.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+    }
+}
