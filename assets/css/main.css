@@ -3435,7 +3435,6 @@ footer .sub-footer .social-link ul li a i {
 }
 
 .product-section {
-  padding-top: calc(30px + 20 * (100vw - 320px) / 1600);
   margin-bottom: 50px;
 }
 .product-section .right-box-contain {
@@ -3914,6 +3913,7 @@ footer .sub-footer .social-link ul li a i {
 .product-section .right-sidebar-box {
   position: sticky;
   top: 10px;
+  padding: 0px !important;
 }
 .product-section .right-sidebar-box .vendor-box {
   padding: calc(12px + 21 * (100vw - 320px) / 1600);
@@ -3935,7 +3935,7 @@ footer .sub-footer .social-link ul li a i {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
 }
 .product-section .right-sidebar-box .vendor-box .verndor-contain h5 {
   font-size: calc(15px + 1 * (100vw - 320px) / 1600);
@@ -14864,7 +14864,6 @@ footer .sub-footer .social-link ul li a i {
   color: #222;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
-  display: -webkit-box;
   overflow: hidden;
   position: relative;
   z-index: 0;
